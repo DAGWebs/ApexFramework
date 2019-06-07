@@ -63,7 +63,7 @@ class User extends DB {
 	public function findUser($id) {
 		if($this->getByEmail($id)){
 			return $this->getByEmail($id);	
-		} else if($htis->getByUsername($id);) {
+		} else if($htis->getByUsername($id)) {
 			return $htis->getByUsername($id);
 		} else if($this->getByID($id)){
 			return $this->getByID($id);
