@@ -77,6 +77,13 @@ class Helpers {
 			echo "</div>";
 		}
 	}
+
+	public static function token() {
+		$token = md5(uniqid());
+		Session::create('token', $token);
+		$input = "<input type='hidden' value='{$token}'>";
+		echo $input;
+	}
 }
 
 /*=====  End of Form Helpers comment block  ======*/
